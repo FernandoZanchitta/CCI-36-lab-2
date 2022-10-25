@@ -23,7 +23,7 @@ def area_func(vertice_1, vertice_2, vertice_3):
 
     return area
 
-f = open("face/face.json", "r")
+f = open("face/face_cleaned.json", "r")
 data_array = json.loads(json.dumps(json.load(f)))
 f.close()
 

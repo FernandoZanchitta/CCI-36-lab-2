@@ -2,7 +2,7 @@ import json
 
 # coord_vertices
 file_name = "faces_cleaned.json"
-cleaned_file = "face.json"
+cleaned_file = "face_cleaned.json"
 f = open("cleanedjson/" + file_name)
 data_array = json.loads(json.dumps(json.load(f)))
 f.close()
