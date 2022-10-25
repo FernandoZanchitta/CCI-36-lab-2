@@ -18,3 +18,7 @@ Após a criação da cena, exportamos o projeto nos formatos: *.dae* e  *gltf*.
 Ao abrir o arquivo exportado em formato *.dae* pudemos extrair os dados relevantes para os cálculos da Parte 3, dentre eles: as coordenadas dos vértices, as cores dos vértices ( seguindo o padrão *R,G,B,A*). 
 
 Foi criado arquivos auxiliares para tal, presentes nas pastas "tojson", "cleanedjson" e "face". Inicialmente, converteu-se o arquivo collada para um arquivo json. Após isso, extraiu-se as informações das coordenadas dos vértices, as normais dos vértices, as coordenadas de textura, as cores e as faces da figura, salvando estas informações em arquivos json na pasta "tojson". Depois, foi realizado uma refatorada em cada arquivo para melhor visualização e consumação desses dados. Finalmente, na pasta face, trabalhou-se no arquivo final contendo todas as informações de cada face, os seus vértices, sua normal, sua área e seu centróide, além das cores de cada vértice.
+
+## Parte 3 Computar Radiosidade:
+
+Para viés de simplificação do problema, foi considerado um problema análogo cujo objetivo é medir a incidência de um feixe de luz de uma fonte pontual sob as faces das figuras da cena. Para que essa conta seja feita a partir dos dados extraidos o Collada foram feitos os seguintes cálculos: a normal ,a área,e o centroide de cada face.
