@@ -13,7 +13,8 @@ Foi gerado a seguinte cena:
 ![imagem da Cena com os planos](assets/images/cenaPlanesView.png)
 Após a criação da cena, exportamos o projeto nos formatos: *.dae* e  *gltf*. Todos os arquivos gerados se encontram na pasta */myScene*.
 
-Observação: Para realizar todos as contas e extração correta dos triângulos e vértices, o grupo optou por utilizar os arquivos gerados pelo professor. O principal motivo dessa decisão foi para diminuir a quantidade de triângulos a serem iterados nas contas.
+Observação: Para realizar todos as contas e extração correta dos triângulos e vértices, o grupo optou por utilizar os arquivos gerados pelo professor. O principal motivo dessa decisão foi para diminuir a quantidade de triângulos a serem iterados nas contas uma vez que para chega-se em um algoritmo de complexidade alta.
+
 ## Parte 2: Extrair as informações dos arquivos 
 
 Ao abrir o arquivo exportado em formato *.dae* pudemos extrair os dados relevantes para os cálculos da Parte 3, dentre eles: as coordenadas dos vértices, as cores dos vértices ( seguindo o padrão *R,G,B,A*). 
@@ -27,3 +28,7 @@ Para viés de simplificação do problema, foi considerado um problema análogo 
 A normal da face foi calculada a partir dos vetores gerados pelos vértices, de forma que <N,V_i> = 0. As áreas das faces foram calculadas a partir do determinante das coordenadas dos vértices. E o Centróide foi gerado encontrando a média geométrica das coordenadas.
 
 Após essa etapa, definimos a emissividade de um ponto de um objeto como 1. Devemos calcular as coordenadas globais desse ponto, para isso, devemos aplicar suas coordenadas a matrix de transformação, gerando assim, um ponto nas dimensões globais.
+
+Foram encontrados problemas nas etapas seguintes, o algoritmo de cálculo de radiosidade conseguiu reduzir sua complexidade computacional, antes O(n<sup>4</sup> ): deviamos calcular o fator de forma para cada conjunto de duas faces, além de fazer a verificação se não há interceptações de outras faces na frente do feixe de luz. 
+
+Ao reduzir a fonte luminosa para um único corpo pontual pode-se diminuir o custo de complexidade do algoritmo para O(n<sup>3</sup>) entretanto não foi possível calcular essa etapa em tempo hábil de espera, devido a estrutura da cena e o problema em questão.
