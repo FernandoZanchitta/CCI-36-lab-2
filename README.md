@@ -22,3 +22,7 @@ Foi criado arquivos auxiliares para tal, presentes nas pastas "tojson", "cleaned
 ## Parte 3 Computar Radiosidade:
 
 Para viés de simplificação do problema, foi considerado um problema análogo cujo objetivo é medir a incidência de um feixe de luz de uma fonte pontual sob as faces das figuras da cena. Para que essa conta seja feita a partir dos dados extraidos o Collada foram feitos os seguintes cálculos: a normal ,a área,e o centroide de cada face.
+
+A normal da face foi calculada a partir dos vetores gerados pelos vértices, de forma que <N,V_i> = 0. As áreas das faces foram calculadas a partir do determinante das coordenadas dos vértices. E o Centróide foi gerado encontrando a média geométrica das coordenadas.
+
+Após essa etapa, definimos a emissividade de um ponto de um objeto como 1. Devemos calcular as coordenadas globais desse ponto, para isso, devemos aplicar suas coordenadas a matrix de transformação, gerando assim, um ponto nas dimensões globais.
