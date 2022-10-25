@@ -32,3 +32,5 @@ Após essa etapa, definimos a emissividade de um ponto de um objeto como 1. Deve
 Foram encontrados problemas nas etapas seguintes, o algoritmo de cálculo de radiosidade conseguiu reduzir sua complexidade computacional, antes O(n<sup>4</sup> ): deviamos calcular o fator de forma para cada conjunto de duas faces, além de fazer a verificação se não há interceptações de outras faces na frente do feixe de luz. 
 
 Ao reduzir a fonte luminosa para um único corpo pontual pode-se diminuir o custo de complexidade do algoritmo para O(n<sup>3</sup>) entretanto não foi possível calcular essa etapa em tempo hábil de espera, devido a estrutura da cena e o problema em questão.
+
+No arquivo face/face.json pode-se encontrar o arquivo json final utilizado no trabalho com todas as faces, detalhando todos os vértices, suas cores, textura, área, centróide, normal e coeficiente de reflexão para cada canal de cor.
